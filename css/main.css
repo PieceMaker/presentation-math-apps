@@ -1,0 +1,9 @@
+.reveal figure {
+    margin-top: 45px;
+}
+
+.reveal figcaption {
+    margin-top: -15px;
+    font-size: medium;
+    font-weight: normal;
+}

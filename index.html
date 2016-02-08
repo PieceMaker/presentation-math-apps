@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Math Apps</title>
+
+		<meta name="description" content="A presentation showing some of the industry-applications of mathematics">
+		<meta name="author" content="Jonathan Adams">
+
+		<link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="node_modules/reveal.js/css/theme/black.css" id="theme">
+        <link rel="stylesheet" href="css/main.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                <!--Slide 1-->
+                <section>
+                    <h3>Do I Have To Teach?</h3>
+                    <h5>Jonathan Adams</h5>
+                    <p>February 7th, 2016</p>
+                </section>
+
+                <!--Slide 2-->
+                <section>
+                    <img src="http://imgs.xkcd.com/comics/purity.png">
+                </section>
+
+                <!--Slide 3-->
+                <section>
+                    <h3>What Can You Become?</h3>
+                    <ul>
+                        <li>Teacher</li>
+                        <li>Doctor or Lawyer</li>
+                        <li>
+                            Analyst or Statistician
+                            <ul>
+                                <li>Use logic and problem-solving skills</li>
+                                <li>Explore data</li>
+                                <li>Build models</li>
+                                <li>Make inferences</li>
+                                <li>Find optimizations</li>
+                                <li>Requires creativity</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <!--Slide 4-->
+                <section>
+                    <h3>Data Analyst/Statistician</h3>
+                    <!--Slide 4.1-->
+                    <section>
+                        <ul>
+                            <li>
+                                Data Mining
+                                <ul>
+                                    <li>
+                                        Make inferences from sets of data
+                                        <ul>
+                                            <li>Forecast likely events</li>
+                                            <li>Identify patterns</li>
+                                            <li>Identify areas to be changed</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Examples
+                                        <ul>
+                                            <li>Target predicting if a woman is pregnant</li>
+                                            <li>Google predicting the severity of flu season</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <!--Slide 4.2-->
+                    <section>
+                        <ul>
+                            <li>
+                                Event Classification
+                                <ul>
+                                    <li>
+                                        Something bad is happening. Is it an accident or is there a more serious problem?
+                                        <ul>
+                                            <li>Hypothesis test and probability</li>
+                                        </ul>
+                                    </li>
+                                    <li>Determine results from samples, surveys, and tests</li>
+                                    <li>Given existing experience, can we classify future events?</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+                <!--Slide 5-->
+                <section>
+                    <h3>Clustering</h3>
+                    <!--Slide 5.1-->
+                    <section>
+                        <figure>
+                            <!--<img src="./images/fieldCentroids.jpg">-->
+                            <figcaption>Centroids of set of fields</figcaption>
+                        </figure>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>Clustering is a form of classification</li>
+                            <li>Group the data by minimizing some dissimilarity measure and assume data within group have same classification</li>
+                            <li>K-means is popular unsupervised clustering algorithm</li>
+                            <li>Requires two inputs: desired number of clusters $k$ and initial cluster centroids</li>
+                        </ul>
+                    </section>
+                    <!--Slide 5.3-->
+                    <section>
+                        <figure>
+                            <!--<img src="./images/kmeansExample.jpg">-->
+                            <figcaption>Example of k-means clustering</figcaption>
+                        </figure>
+                    </section>
+                    <!--Slide 5.4-->
+                    <section>
+                        <figure>
+                            <!--<img src="./images/clusteredFields.jpg">-->
+                            <figcaption>Centroids colored by cluster</figcaption>
+                        </figure>
+                    </section>
+                    <!--Slide 5.5-->
+                    <section>
+                        <ul>Can anyone catch the "error" in using this method?</ul>
+                    </section>
+                </section>
+                <!--Slide 6-->
+                <section>
+                    Classification
+                    <!--Slide 6.1-->
+                    <section>
+                        <figure>
+                            <img src="https://upload.wikimedia.org/wikipedia/en/0/01/Soybean_Grain_Yield_Map.jpg">
+                            <figcaption>Sample precision ag heatmap showing soybean yield</figcaption>
+                        </figure>
+                    </section>
+                    <!--Slide 6.2-->
+                    <section>
+                        <figure>
+                            <!--<img src="./images/irrigatedSample.jpg">-->
+                            <figcaption>Simulated heatmap of field with irrigation pivot</figcaption>
+                        </figure>
+                    </section>
+                    <!--Slide 6.3-->
+                    <section>
+                        <figure>
+                            <!--<img src="./images/nonIrrigatedSample.jpg">-->
+                            <figcaption>Simulated heatmap with no sign of irrigation</figcaption>
+                        </figure>
+                    </section>
+                    <!--Slide 6.4-->
+                    <section>
+                        <ul>
+                            <li>How might we go about solving this?</li>
+                            <li class="fragment">What makes the irrigated different from the non-irrigated?</li>
+                            <li class="fragment">How is a field typically planted?</li>
+                            <li class="fragment">If the path goes back-and-forth, what might we expect?</li>
+                            <li class="fragment">Could we not view the path as a time series?</li>
+                        </ul>
+                    </section>
+                    <!--Slide 6.5-->
+                    <section>
+                        <figure>
+                            <!--<img src="./images/irrigatedTS.jpg">-->
+                            <figcaption>Example of irrigated time series data</figcaption>
+                        </figure>
+                    </section>
+                    <!--Slide 6.6-->
+                    <section>
+                        <figure>
+                            <!--<img src="./images/nonIrrigatedTS.jpg">-->
+                            <figcaption>Example of non-irrigated time series data</figcaption>
+                        </figure>
+                    </section>
+                    <!--Slide 6.7-->
+                    <section>
+                        <figure>
+                            <!--<img src="./images/tsHistogram.jpg">-->
+                            <figcaption>Histogram of test statistics</figcaption>
+                        </figure>
+                    </section>
+                </section>
+                <!--Slide 7-->
+                <section>
+                    <h3>Conclusion</h3>
+                    <ul>
+                        <li>There are many jobs out there other than teaching</li>
+                        <li>People <em>will</em> pay you to solve problems all day</li>
+                        <li>A degree in math is only a toolset, you will have to get creative with it</li>
+                        <li>Never say no to a request</li>
+                        <li>
+                            Knowing a progamming language is vital!!!
+                            <ul>
+                                <li>Python</li>
+                                <li>R</li>
+                                <li>SQL</li>
+                            </ul>
+                        </li>
+                        <li>Google and StackOverflow are your friends!</li>
+                    </ul>
+                </section>
+                <!--Slide 8-->
+                <section>
+                    <h3>Questions?</h3>
+                </section>
+			</div>
+		</div>
+
+		<script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+		<script src="node_modules/reveal.js/js/reveal.js"></script>
+        <script src="node_modules/reveal.js/plugin/math/math.js"></script>
+
+		<script>
+			Reveal.initialize({
+                src: "node_modules/reveal.js/plugin/math/math.js",
+                async: true
+            });
+		</script>
+
+	</body>
+</html>
