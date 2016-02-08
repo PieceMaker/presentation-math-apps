@@ -2,4 +2,8 @@
 .idea/
 
 # Node modules
-node_modules
+node_modules/reveal.js/*
+!node_modules/reveal.js/css/
+!node_modules/reveal.js/js/
+!node_modules/reveal.js/lib/
+!node_modules/reveal.js/plugin/
