@@ -2,5 +2,4 @@
 .idea/
 
 # Node modules
-node_modules/*
-!node_modules/reveal.js/
+node_modules
